@@ -7,6 +7,8 @@ global using dotnetRpg.Data;
 global using dotnetRpg.Services.Weaponservice;
 global using dotnetRpg.Dtos.Skills;
 global using dotnetRpg.Dtos.Weapon;
+global using dotnetRpg.Services.FightService;
+global using dotnetRpg.Dtos.Fight;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
@@ -50,6 +52,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IWeaponService, WeaponService>();
+builder.Services.AddScoped<IFightService, FightService>();
 
 var app = builder.Build();
 

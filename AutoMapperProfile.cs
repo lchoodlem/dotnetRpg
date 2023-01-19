@@ -11,6 +11,7 @@ namespace dotnetRpg
             CreateMap<AddCharacterDto,Character>();
             CreateMap<Weapon,GetWeaponDto>();
             CreateMap<Skill,GetSkillDto>();
+             CreateMap<Character,HighScoreDto>();
         }
     }
 }
