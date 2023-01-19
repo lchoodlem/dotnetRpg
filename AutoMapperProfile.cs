@@ -1,5 +1,6 @@
 using System;
 
+
 namespace dotnetRpg
 {
     public class AutoMapperProfile : Profile
@@ -8,6 +9,8 @@ namespace dotnetRpg
         {
             CreateMap<Character,GetCharacterDto>();
             CreateMap<AddCharacterDto,Character>();
+            CreateMap<Weapon,GetWeaponDto>();
+            CreateMap<Skill,GetSkillDto>();
         }
     }
 }

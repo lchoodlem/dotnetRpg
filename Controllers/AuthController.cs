@@ -11,7 +11,7 @@ namespace dotnetRpg.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        public IAuthRepository _authRepo;
+        private readonly IAuthRepository _authRepo;
         public AuthController(IAuthRepository authRepo)
         {
             _authRepo = authRepo;
